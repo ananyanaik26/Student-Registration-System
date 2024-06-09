@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: bisque;
+        }
+        
+        header {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .container1 {
+            position: relative;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 300px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #101010;
+            border-radius: 4px;
+        }
+
+        button {
+            display: block;
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #6d6942;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .container2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            left: 250px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>This system enables students to add, edit and delete their information.</p>
+    </header>
+    <div class="container">
+        <div class="container1">
+            
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" required>
+    
+                <label for="studentId">Student ID:</label>
+                <input type="number" name="studentId" id="studentId" required>
+    
+                <label for="email">EmailID:</label>
+                <input type="email" name="email" id="email" required>
+    
+                <label for="contact">Contact Number:</label>
+                <input type="number" name="contact" id="contact" required>
+    
+                <button onclick="addStudent()">Add</button>
+           
+        </div>
+        <div class="container2">
+            <table id="studentTable">
+                <tr>
+                    <th>StudentName</th>
+                    <th>StudentId</th>
+                    <th>EmailID</th>
+                    <th>Contact Number</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
